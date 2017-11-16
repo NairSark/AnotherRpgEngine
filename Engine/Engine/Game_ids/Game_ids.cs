@@ -8,6 +8,10 @@ namespace Engine
 {
     public static partial class Controller
     {
+        const int hw = 1;
+        const int hm = 100;
+        const int hp = 1000;
+
         // Items
         private const int weapon_c = 0;
         private const int potion_c = 1000;
@@ -29,6 +33,8 @@ namespace Engine
         public const int potion_medium_hp_pot = 2 + potion_c;
         public const int potion_fire_pot = 3 + potion_c;
         public const int potion_antidote = 4 + potion_c;
+        public const int potion_lesser_mp_pot = 5 + potion_c;
+        public const int potion_lesser_st_pot = 6 + potion_c;
 
         // Items
 
@@ -36,6 +42,7 @@ namespace Engine
 
         public const int spell_lesser_healing = 1;
         public const int spell_fireball = 2;
+        public const int spell_mana_to_stamina = 3;
 
         // Spells
 

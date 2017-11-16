@@ -23,10 +23,12 @@ namespace Engine
             Location caves_spider_den_nest = new Location(location_caves01_spider_den_nest, "Пещера - гнездо королевы", "Я неуверен это камень или огромная лапа?");
 
             home.NearestLocations = new List<Location> { town };
+            home.IsSafe = true;
 
-            town.NearestLocations = new List<Location> { home, fred_house };
+            town.NearestLocations = new List<Location> { home, fred_house, forest };
 
             fred_house.NearestLocations = new List<Location> { town };
+            fred_house.JustQuest = QuestParse(quest_bring_rat_tails);
 
             forest.NearestLocations = new List<Location> { town, aban_house, fields };
             forest.EnemiesHere = new List<Enemy> { EnemyParse(enemy_rat) };

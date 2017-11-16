@@ -23,8 +23,8 @@ namespace Engine
 
         public static void PopulateWorld()
         {
-            PopulateEntities();
             PopulateItems();
+            PopulateEntities();
             PopulateQuests();
             PopulateLocations();
             PopulateSpells();

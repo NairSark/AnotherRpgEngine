@@ -7,10 +7,10 @@ using System.ComponentModel;
 
 namespace Engine
 {
-    public class InventoryCollection : INotifyPropertyChanged
+    public class InventoryCollection
     {
-        public Item Item { get; set; }//OnPropetryChanged(nameof(Item));
-        public int Quanity { get; set; }//OnPropetryChanged(nameof(Quanity));
+        public Item Item;
+        public int Quanity;
 
         public InventoryCollection(Item item, int quanity)
         {
@@ -18,13 +18,5 @@ namespace Engine
             Quanity = quanity;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropetryChanged(string name)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(name));
-            }
-        }
     }
 }
